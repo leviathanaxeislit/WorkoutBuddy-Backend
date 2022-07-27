@@ -1,7 +1,9 @@
+/* This is importing the mongoose library and creating a new schema. */
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
+/* This is creating a new schema for the workout model. */
 const workoutSchema = new Schema(
   {
     title: {
