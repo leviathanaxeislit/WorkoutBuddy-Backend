@@ -7,10 +7,14 @@ getWorkouts,
 updateWorkout,
 deleteWorkout} = require("../controllers/workoutController");
 
+
+const requireAuth = require('../middleware/requireAuth')
 /* This is the router. It is a middleware that is used to handle HTTP requests. It is used to create
 modular, mountable route handlers. A Router instance is a complete middleware and routing system;
 for this reason, it is often referred to as a “mini-app”. */
 const router = express.Router();
+
+router.use(requireAuth)
 
 // GET all workouts
 
